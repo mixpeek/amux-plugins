@@ -1,0 +1,17 @@
+{
+  "name": "amux",
+  "description": "amux for Claude Code: delegate work to background agents and check on them.",
+  "owner": {
+    "name": "Mixpeek",
+    "url": "https://amux.io"
+  },
+  "plugins": [
+    {
+      "name": "amux",
+      "source": "./plugins/amux",
+      "description": "Hand tasks to background Claude Code, Codex and Gemini CLI workers that keep running after your session ends, check on them, and set up amux, the self-hosted control plane for running an AI engineering team from one board or your phone.",
+      "category": "productivity",
+      "homepage": "https://amux.io"
+    }
+  ]
+}

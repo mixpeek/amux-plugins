@@ -1,0 +1,20 @@
+{
+  "name": "amux",
+  "interface": {
+    "displayName": "amux"
+  },
+  "plugins": [
+    {
+      "name": "amux",
+      "source": {
+        "source": "local",
+        "path": "./plugins/amux"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

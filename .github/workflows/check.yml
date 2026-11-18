@@ -1,0 +1,24 @@
+name: check
+on: [push, pull_request]
+jobs:
+  manifests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Manifests are valid JSON
+        run: |
+          for f in .claude-plugin/marketplace.json .agents/plugins/marketplace.json gemini-extension.json \
+                   plugins/amux/.claude-plugin/plugin.json plugins/amux/.codex-plugin/plugin.json; do
+            python3 -m json.tool "$f" > /dev/null || { echo "invalid JSON: $f"; exit 1; }
+          done
+      - name: Versions agree
+        run: |
+          python3 - <<'PY'
+          import json
+          files = ["gemini-extension.json", "plugins/amux/.claude-plugin/plugin.json", "plugins/amux/.codex-plugin/plugin.json"]
+          versions = {f: json.load(open(f))["version"] for f in files}
+          print(versions)
+          assert len(set(versions.values())) == 1, "plugin versions differ"
+          PY
+      - name: Gemini commands match the skills
+        run: python3 scripts/sync-gemini.py --check

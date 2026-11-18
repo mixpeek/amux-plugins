@@ -1,0 +1,23 @@
+{
+  "name": "amux",
+  "version": "0.1.0",
+  "description": "Hand tasks to background Claude Code, Codex and Gemini CLI workers that keep running after your session ends, check on them, and set up amux, the self-hosted control plane for running an AI engineering team from one board or your phone.",
+  "author": {
+    "name": "Mixpeek",
+    "url": "https://amux.io"
+  },
+  "homepage": "https://amux.io",
+  "repository": "https://github.com/mixpeek/amux-plugins",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "amux",
+    "agents",
+    "background-agents",
+    "parallel-agents",
+    "claude-code",
+    "codex",
+    "gemini-cli",
+    "orchestration",
+    "task-board"
+  ]
+}
