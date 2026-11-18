@@ -29,9 +29,19 @@ background, in parallel or overnight.
 
 ## How it works
 
-Every skill runs the `amux` command line and reads the amux server on your own
-machine. The plugin sends nothing to any other service. It asks before it
-installs software or starts a worker.
+Every skill runs the `amux` command line against the amux server on your own
+machine; Mixpeek receives nothing. Where data goes:
+
+- `status` reads your workers' state and your board cards, which can contain
+  names or email addresses you put there. It stores nothing.
+- `delegate` sends the task text to your local amux server, which types it into
+  the worker you chose. That worker is Claude Code, Codex or Gemini CLI running
+  under your own account, so the task reaches that agent's model provider
+  (Anthropic, OpenAI or Google) the same way it would if you typed it there.
+- `setup` downloads the amux installer from amux.io and github.com, and only
+  after you say yes.
+
+The plugin asks before it installs software or starts a worker.
 
 ## Requirements
 
