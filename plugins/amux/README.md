@@ -8,6 +8,12 @@ engineering team from one board or your phone. It runs Claude Code, Codex and
 Gemini CLI agents in parallel as named workers, with a shared task board, a
 scheduler and an iPhone app. This plugin connects your session to it.
 
+## Install
+
+```text
+/plugin install amux --marketplace mixpeek/amux-plugins
+```
+
 ## Skills
 
 - `/amux:setup` checks whether amux is installed, offers the free self-hosted

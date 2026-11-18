@@ -19,5 +19,10 @@
     "gemini-cli",
     "orchestration",
     "task-board"
-  ]
+  ],
+  "displayName": "amux",
+  "privacyPolicyUrl": "https://amux.io/privacy/",
+  "supportUrl": "https://github.com/mixpeek/amux-plugins/issues",
+  "documentationUrl": "https://github.com/mixpeek/amux-plugins#readme",
+  "termsOfServiceUrl": "https://amux.io/terms/"
 }

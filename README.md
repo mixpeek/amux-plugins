@@ -15,9 +15,10 @@ for a dedicated server that stays on when your laptop sleeps.
 **Claude Code**
 
 ```text
-/plugin marketplace add mixpeek/amux-plugins
-/plugin install amux@amux
+/plugin install amux --marketplace mixpeek/amux-plugins
 ```
+
+On Claude Code older than 2.1.275, run `/plugin marketplace add mixpeek/amux-plugins`, then `/plugin install amux@amux`.
 
 **Codex**
 
